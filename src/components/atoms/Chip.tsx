@@ -7,7 +7,7 @@ interface AtomsChipProps {
 }
 
 const AtomsChip = ({ title, icon }: AtomsChipProps) => (
-  <div className="p-2 rounded-lg flex flex-row items-center bg-softBlue whitespace-nowrap">
+  <div className="p-2 rounded-lg flex flex-row items-center bg-softBlue whitespace-nowrap cursor-pointer">
     <div className="flex items-center gap-2">
       {icon && (
         <div className="w-6 h-6">
