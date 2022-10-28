@@ -7,9 +7,9 @@ import { logo } from 'src/assets'
 import { link } from 'config/link'
 
 const TemplatesNavbar = () => (
-  <nav className="py-8 px-6 flex justify-between items-center container mx-auto">
+  <nav className="py-8 px-4 flex justify-between items-center container mx-auto">
     <Image src={logo} alt="logo" height="16" width="75" priority />
-    <div className="md:flex hidden items-center xl:gap-24 lg:gap-20 md:gap-10">
+    <div className="md:flex hidden items-center xl:gap-20 lg:gap-16 md:gap-10">
       {link.map((el) => (
         <Link
           key={el.title}
