@@ -25,14 +25,9 @@ const Get = async ({ baseURL, endpoint, params, headers = {} }: Get) => {
       params,
       baseURL,
     })) || {}
-  const isSuccess = status === 200 && response.data === 2200
-
-  if (isSuccess) {
-    return response.data
-  }
 
   return {
-    code: 2200,
+    code: status,
     message: response.data?.message || '',
     ...response.data,
   }
