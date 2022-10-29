@@ -8,8 +8,9 @@ import MetaHeader from '@/molecules/meta-header'
 import { Market } from '@/constants/seo'
 
 const Page = (props: any) => {
-  const dataTradePriceChanges = props?.dehydratedState?.queries[0]?.state?.data?.data
+  // console.log(props?.dehydratedState.queries[0].state, '<< tes')
 
+  const dataTradePriceChanges = props?.dehydratedState?.queries[0]?.state?.data?.data
   return (
     <>
       <MetaHeader
@@ -23,24 +24,6 @@ const Page = (props: any) => {
   )
 }
 
-export const getServerSideProps = async () => {
-  const queryClient = new QueryClient()
-
-  //   prefetch data on the server
-  await queryClient.fetchQuery(['wallet-supported-currencies'], () =>
-    getWalletSupportedCurrencies(),
-  )
-  await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
-
-  // const data = await getTradePriceChanges()
-  return {
-    props: {
-      // data,
-      // dehydrate query cache
-      dehydratedState: dehydrate(queryClient),
-    },
-  }
-}
 // export const getServerSideProps = async () => {
 //   const queryClient = new QueryClient()
 
@@ -50,8 +33,10 @@ export const getServerSideProps = async () => {
 //   )
 //   await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
 
+//   // const data = await getTradePriceChanges()
 //   return {
 //     props: {
+//       // data,
 //       // dehydrate query cache
 //       dehydratedState: dehydrate(queryClient),
 //     },
