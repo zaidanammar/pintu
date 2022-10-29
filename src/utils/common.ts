@@ -3,4 +3,7 @@ export const toRupiah = (number: number | bigint | string) =>
     style: 'currency',
     currency: 'IDR',
     maximumFractionDigits: 0,
-  }).format(Number(number))
+  })
+    .format(Number(number))
+    .replaceAll(',', '.')
+    .replaceAll('IDR', 'Rp')

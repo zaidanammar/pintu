@@ -1,4 +1,4 @@
-export interface Trade {
+export interface Token {
   pair: string
   latestPrice: string
   day: string

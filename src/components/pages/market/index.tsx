@@ -4,15 +4,15 @@ import Navbar from '@/templates/navbar'
 import TopMover from '@/organisms/top-movers'
 import Headline from '@/molecules/headline'
 import Tags from '@/molecules/tags'
-import CryptoList from '@/organisms/crypto-list'
-import type { Trade } from '@/types/trade'
+import TokenList from '@/organisms/token-list'
+import type { Token } from '@/types/token'
 
-interface MoleculesCryptoTableProps {
-  dataTradePriceChanges: Trade[]
+interface MoleculesTokenTableProps {
+  dataTradePriceChanges: Token[]
   dataSupportedCurrencies: any
 }
 
-const PagesMarket: React.FC<MoleculesCryptoTableProps> = ({
+const PagesMarket: React.FC<MoleculesTokenTableProps> = ({
   dataTradePriceChanges,
   dataSupportedCurrencies,
 }) => (
@@ -21,7 +21,7 @@ const PagesMarket: React.FC<MoleculesCryptoTableProps> = ({
     <Headline />
     <TopMover />
     <Tags />
-    <CryptoList
+    <TokenList
       dataTradePriceChanges={dataTradePriceChanges}
       dataSupportedCurrencies={dataSupportedCurrencies}
     />
