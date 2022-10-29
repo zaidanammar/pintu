@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
 
@@ -19,21 +18,21 @@ const Page = () => (
   </>
 )
 
-// export const getServerSideProps = async () => {
-//   const queryClient = new QueryClient()
+export const getServerSideProps = async () => {
+  const queryClient = new QueryClient()
 
-//   //   prefetch data on the server
-//   await queryClient.fetchQuery(['wallet-supported-currencies'], () =>
-//     getWalletSupportedCurrencies(),
-//   )
-//   await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
+  //   prefetch data on the server
+  await queryClient.fetchQuery(['wallet-supported-currencies'], () =>
+    getWalletSupportedCurrencies(),
+  )
+  await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
 
-//   return {
-//     props: {
-//       // dehydrate query cache
-//       dehydratedState: dehydrate(queryClient),
-//     },
-//   }
-// }
+  return {
+    props: {
+      // dehydrate query cache
+      dehydratedState: dehydrate(queryClient),
+    },
+  }
+}
 
 export default Page
