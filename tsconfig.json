@@ -28,6 +28,7 @@
       "@/pages/*": ["src/components/pages/*"],
       "@/templates/*": ["src/components/templates/*"],
       "@/constants/*": ["src/constants/*"],
+      "@/types/*": ["src/types/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

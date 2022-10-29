@@ -1,9 +1,16 @@
 import { useQuery } from '@tanstack/react-query'
-import { getTradePriceChanges } from 'services/market'
+import { getTradePriceChanges, getWalletSupportedCurrencies } from 'services/market'
 
 const useFetchTradePriceChanges = () =>
   useQuery(['trade-price-changes'], () => getTradePriceChanges(), {
     refetchOnWindowFocus: false,
+    refetchInterval: 1000,
+    keepPreviousData: true,
   })
 
-export { useFetchTradePriceChanges }
+const useFetchWalletSupportedCurrencies = () =>
+  useQuery(['wallet-supported-currencies'], () => getWalletSupportedCurrencies(), {
+    refetchOnWindowFocus: false,
+  })
+
+export { useFetchTradePriceChanges, useFetchWalletSupportedCurrencies }
