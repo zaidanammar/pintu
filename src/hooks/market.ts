@@ -5,7 +5,6 @@ const useFetchTradePriceChanges = () =>
   useQuery(['trade-price-changes'], () => getTradePriceChanges(), {
     refetchOnWindowFocus: false,
     refetchInterval: 1000,
-    keepPreviousData: true,
   })
 
 const useFetchWalletSupportedCurrencies = () =>
