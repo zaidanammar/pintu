@@ -61,9 +61,7 @@ const MoleculesTokenTable: React.FC<MoleculesTokenTableProps> = ({
               </div>
             </td>
             <td className="w-[220px] p-5 border-b">
-              <p className={Number(item.latestPrice) > 0 ? 'text-green-500' : 'text-red-500'}>
-                {toRupiah(item.latestPrice)}
-              </p>
+              <p className="text-green-500">{toRupiah(item.latestPrice)}</p>
             </td>
             <td className="w-[130px] border-b">
               <TokenArrowText percentage={item.day} />

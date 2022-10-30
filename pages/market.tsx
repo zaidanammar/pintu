@@ -34,7 +34,7 @@ export const getServerSideProps = async () => {
     getWalletSupportedCurrencies(),
   )
 
-  await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
+  // await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
 
   return {
     props: {
