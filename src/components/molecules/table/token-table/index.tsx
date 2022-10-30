@@ -4,6 +4,7 @@ import { ReactSVG } from 'react-svg'
 import { toRupiah } from 'utils/common'
 import TokenArrowText from '@/atoms/TokenArrowText'
 import type { Token } from '@/types/token'
+import type { Currency } from '@/types/currency'
 
 interface TableHeaderProps {
   title: string
@@ -18,7 +19,7 @@ const TableHeader = ({ title, className }: TableHeaderProps) => (
 
 interface MoleculesTokenTableProps {
   dataTradePriceChanges: Token[]
-  dataSupportedCurrencies: any
+  dataSupportedCurrencies: Currency[]
 }
 
 const MoleculesTokenTable: React.FC<MoleculesTokenTableProps> = ({

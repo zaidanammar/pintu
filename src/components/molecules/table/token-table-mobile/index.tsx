@@ -4,12 +4,13 @@ import { ReactSVG } from 'react-svg'
 import { toRupiah } from 'utils/common'
 import TokenArrowText from '@/atoms/TokenArrowText'
 import type { Token } from '@/types/token'
+import type { Currency } from '@/types/currency'
 
 type FilterTimeType = 'day' | 'week' | 'month' | 'year'
 
 interface MoleculesTokenTableMobileProps {
   dataTradePriceChanges: Token[]
-  dataSupportedCurrencies: any
+  dataSupportedCurrencies: Currency[]
 }
 
 const MoleculesTokenTableMobile: React.FC<MoleculesTokenTableMobileProps> = ({

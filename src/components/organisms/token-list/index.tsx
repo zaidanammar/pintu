@@ -3,10 +3,11 @@ import React from 'react'
 import TokenTable from '@/molecules/table/token-table'
 import TokenTableMobile from '@/molecules/table/token-table-mobile'
 import type { Token } from '@/types/token'
+import type { Currency } from '@/types/currency'
 
 interface OrganismsTokenListProps {
   dataTradePriceChanges: Token[]
-  dataSupportedCurrencies: any
+  dataSupportedCurrencies: Currency[]
 }
 
 const OrganismsTokenList: React.FC<OrganismsTokenListProps> = ({

@@ -24,7 +24,7 @@ const TemplatesNavbar = () => (
                 alt="country"
                 priority
                 width={32}
-                height={24}
+                height={32}
                 className="h-full w-full border"
               />
             </div>

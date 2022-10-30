@@ -5,12 +5,14 @@
  */
 
 import React from 'react'
+
 import PagesMarket from '@/pages/market'
-import { Token } from '@/types/token'
+import type { Token } from '@/types/token'
+import type { Currency } from '@/types/currency'
 
 interface ContainerMarketProps {
   dataTradePriceChanges: Token[]
-  dataSupportedCurrencies: any
+  dataSupportedCurrencies: Currency[]
 }
 
 const ContainerMarket: React.FC<ContainerMarketProps> = ({
