@@ -26,12 +26,13 @@ export const getServerSideProps = async () => {
   // await queryClient.fetchQuery(['wallet-supported-currencies'], () =>
   //   getWalletSupportedCurrencies(),
   // )
-  await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
+  const data = await queryClient.fetchQuery(['trade-price-changes'], () => getTradePriceChanges())
 
   return {
     props: {
       // dehydrate query cache
       dehydratedState: dehydrate(queryClient),
+      data,
     },
   }
 }
