@@ -5,20 +5,22 @@
  */
 
 import React from 'react'
-
-import { useFetchTradePriceChanges, useFetchWalletSupportedCurrencies } from 'src/hooks/market'
 import PagesMarket from '@/pages/market'
+import { Token } from '@/types/token'
 
-const ContainerMarket: React.FC = () => {
-  const { data: dataTradePriceChanges } = useFetchTradePriceChanges()
-  const { data: dataSupportedCurrencies } = useFetchWalletSupportedCurrencies()
-
-  return (
-    <PagesMarket
-      dataTradePriceChanges={dataTradePriceChanges?.data}
-      dataSupportedCurrencies={dataSupportedCurrencies?.data}
-    />
-  )
+interface ContainerMarketProps {
+  dataTradePriceChanges: Token[]
+  dataSupportedCurrencies: any
 }
+
+const ContainerMarket: React.FC<ContainerMarketProps> = ({
+  dataSupportedCurrencies,
+  dataTradePriceChanges,
+}) => (
+  <PagesMarket
+    dataTradePriceChanges={dataTradePriceChanges}
+    dataSupportedCurrencies={dataSupportedCurrencies}
+  />
+)
 
 export default ContainerMarket
