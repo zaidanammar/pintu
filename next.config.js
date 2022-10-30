@@ -8,6 +8,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  distDir: 'storybook-static',
 }
 
 module.exports = nextConfig
