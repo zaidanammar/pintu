@@ -23,6 +23,16 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+  "framework": "@storybook/react",
+  typescript: {
+     check: false,
+     checkOptions: {},
+     reactDocgen: false,
+     reactDocgenTypescriptOptions: {
+        shouldExtractLiteralValuesFromEnum: true,
+        propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+     },
+  },
   webpackFinal: (config) => {
     /**
      * Add support for alias-imports
