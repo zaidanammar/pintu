@@ -4,10 +4,15 @@ import React from 'react'
 interface AtomsChipProps {
   title: string
   icon?: any
+  fullWidth?: boolean
 }
 
-const AtomsChip = ({ title, icon }: AtomsChipProps) => (
-  <div className="p-2 rounded-lg flex flex-row items-center bg-softBlue whitespace-nowrap cursor-pointer">
+const AtomsChip = ({ title, icon, fullWidth = false }: AtomsChipProps) => (
+  <div
+    className={`p-2 rounded-lg flex flex-row items-center bg-softBlue whitespace-nowrap cursor-pointer ${
+      fullWidth ? 'w-full' : 'w-fit'
+    }`}
+  >
     <div className="flex items-center gap-2">
       {icon && (
         <div className="w-6 h-6">
