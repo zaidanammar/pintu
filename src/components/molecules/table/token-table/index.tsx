@@ -46,6 +46,7 @@ const MoleculesTokenTable: React.FC<MoleculesTokenTableProps> = ({
                 <div className="flex items-center ml-1">
                   <div
                     style={{
+                      width: '32px',
                       color: `${dataSupportedCurrencies[idx + 1]?.color}`,
                     }}
                   >

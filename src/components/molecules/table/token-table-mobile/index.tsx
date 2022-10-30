@@ -24,10 +24,13 @@ const MoleculesTokenTableMobile: React.FC<MoleculesTokenTableMobileProps> = ({
     <section>
       <aside className="flex items-center p-4 border-t border-b gap-4">
         <div className="flex-1">
-          <p className="text-xs font-semibold">CRYPTO</p>
+          <p className="text-xs font-semibold font-text">CRYPTO</p>
         </div>
         <div>
-          <select onChange={onChangeTime} className="text-xs font-semibold border rounded-md p-1">
+          <select
+            onChange={onChangeTime}
+            className="text-xs font-text font-semibold border rounded-md p-1"
+          >
             <option value="day">24 JAM</option>
             <option value="week">1 MGG</option>
             <option value="month">1 BLN</option>
@@ -44,6 +47,7 @@ const MoleculesTokenTableMobile: React.FC<MoleculesTokenTableMobileProps> = ({
               <div>
                 <div
                   style={{
+                    width: '32px',
                     color: `${dataSupportedCurrencies[idx + 1]?.color}`,
                   }}
                 >

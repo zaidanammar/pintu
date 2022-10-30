@@ -1,6 +1,7 @@
 const plugins = {
   'postcss-import': {},
   tailwindcss: {},
+  autoprefixer: {},
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -10,14 +11,7 @@ if (process.env.NODE_ENV === 'production') {
   }
 
   plugins.cssnano = {
-    preset: [
-      'default',
-      {
-        discardComments: {
-          removeAll: true,
-        },
-      },
-    ],
+    preset: ['default'],
   }
 }
 
