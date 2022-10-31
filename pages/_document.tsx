@@ -12,7 +12,7 @@ const Document = () => (
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="   https://s3.ap-southeast-1.amazonaws.com/content.pintu.co.id/ic_launcher_1493da4144.png"
+        href="https://s3.ap-southeast-1.amazonaws.com/content.pintu.co.id/ic_launcher_1493da4144.png"
       />
     </Head>
     <body>
