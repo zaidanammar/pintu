@@ -2,7 +2,7 @@ import Get from 'api/get'
 
 export const getTradePriceChanges = async () => {
   const response = await Get({
-    endpoint: `${process.env.NEXT_PUBLIC_API}/trade/price-changes`,
+    endpoint: `/api/trade/price-changes`,
   })
 
   return {
@@ -13,7 +13,7 @@ export const getTradePriceChanges = async () => {
 }
 export const getWalletSupportedCurrencies = async () => {
   const response = await Get({
-    endpoint: `${process.env.NEXT_PUBLIC_API}/wallet/supportedCurrencies`,
+    endpoint: `/api/wallet/supportedCurrencies`,
   })
 
   return {

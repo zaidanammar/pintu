@@ -8,6 +8,14 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${process.env.NEXT_PUBLIC_API}/:path*`,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
